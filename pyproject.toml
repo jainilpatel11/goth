@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goth"
+version = "0.1.0"
+description = "A gothic-themed TUI for managing and switching between gcloud configurations"
+requires-python = ">=3.9"
+dependencies = ["textual>=8.0"]
+
+[project.scripts]
+goth = "goth:main"
+
+[tool.setuptools]
+py-modules = ["goth"]

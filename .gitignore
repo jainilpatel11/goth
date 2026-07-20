@@ -1,0 +1,24 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Package build and install artifacts
+*.egg-info/
+dist/
+build/
+
+# Python virtual environment directories
+.venv/
+venv/
+env/
+ENV/
+
+# IDE configurations
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
