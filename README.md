@@ -1,6 +1,8 @@
 # goth
 
-goth is a terminal user interface (TUI) for managing and switching between gcloud configurations. It leverages gcloud's built-in named configurations to isolate credentials, projects, regions, and zones, removing the need to repeatedly run login and project setup commands.
+goth is a minimal full-screen terminal UI for managing and switching between gcloud configurations. It leverages gcloud's built-in named configurations to isolate credentials, projects, regions, and zones, removing the need to repeatedly run login and project setup commands.
+
+The app runs full screen with a black-and-white layout. Keybindings live in the footer only. Prompts for names and delete confirmation overlay near the bottom — type a value or `y`/`n`, then Enter. There is no command palette.
 
 ## Requirements
 
@@ -56,7 +58,8 @@ goth --help
 ## Keybindings
 
 - **Enter**: Activate the selected configuration. If the associated account is not authenticated, the TUI suspends, runs `gcloud auth login`, and resumes.
-- **n**: Create a new configuration end-to-end (prompting for the configuration name, launching the interactive authentication flow, and prompting for the GCP project ID).
-- **d**: Delete the selected configuration (blocked on the active configuration).
+- **n**: Create a new configuration (bottom prompt for name → auth login → bottom prompt for project ID).
+- **d**: Delete the selected configuration (bottom prompt: type `y`/`yes` or `n`/`no`). If it's active, goth switches away first.
 - **r**: Refresh the list of configurations.
-- **q / Esc**: Quit the application.
+- **q**: Quit the application.
+- **Esc**: Cancel an open bottom prompt, or quit if no prompt is open.
