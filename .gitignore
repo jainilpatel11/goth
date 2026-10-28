@@ -22,3 +22,4 @@ ENV/
 # OS specific files
 .DS_Store
 Thumbs.db
+.agent/.env
